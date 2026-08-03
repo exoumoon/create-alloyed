@@ -1,20 +1,20 @@
 package com.molybdenum.alloyed.common.item;
 
 import com.google.common.base.Suppliers;
-import com.molybdenum.alloyed.common.registry.ModItems;
+import com.molybdenum.alloyed.common.registry.ModTags;
+
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
 public enum ModItemTiers implements Tier {
-    STEEL(2, 1000, 7.0F, 3.0F, 11,
-            () -> Ingredient.of(ModItems.STEEL_INGOT.get()));
+    STEEL(3, 1800, 8.0F, 3.0F, 10, () -> Ingredient.of(ModTags.Items.STEEL_INGOT));
 
     // Base code for item tier
 
@@ -25,7 +25,13 @@ public enum ModItemTiers implements Tier {
     private final int enchantmentValue;
     private final Supplier<Ingredient> repairIngredient;
 
-    ModItemTiers(int level, int uses, float speed, float damage, int enchantmentValue, Supplier<Ingredient> repairIngredient) {
+    ModItemTiers(
+            int level,
+            int uses,
+            float speed,
+            float damage,
+            int enchantmentValue,
+            Supplier<Ingredient> repairIngredient) {
         this.level = level;
         this.uses = uses;
         this.speed = speed;
@@ -51,7 +57,7 @@ public enum ModItemTiers implements Tier {
 
     @Override
     public TagKey<Block> getIncorrectBlocksForDrops() {
-        return BlockTags.INCORRECT_FOR_IRON_TOOL;
+        return BlockTags.INCORRECT_FOR_DIAMOND_TOOL;
     }
 
     @Override
