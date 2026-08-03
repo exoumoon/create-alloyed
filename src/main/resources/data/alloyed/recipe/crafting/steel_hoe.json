@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"#": { "tag": "c:rods/wooden" },
+		"X": { "tag": "c:ingots/steel" }
+	},
+	"pattern": ["XX", "# ", "# "],
+	"result": {
+		"id": "alloyed:steel_hoe"
+	}
+}

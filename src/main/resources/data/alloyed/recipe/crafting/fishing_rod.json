@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"#": { "tag": "c:ingots/steel" },
+		"X": { "item": "minecraft:string" }
+	},
+	"pattern": ["  #", " #X", "# X"],
+	"result": {
+		"id": "alloyed:steel_fishing_rod"
+	}
+}
